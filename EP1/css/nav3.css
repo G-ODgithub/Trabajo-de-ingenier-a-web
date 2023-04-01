@@ -1,0 +1,153 @@
+/* Variables de estilo */
+:root {
+	--primary-color: #1a1a1a;
+	--secondary-color: #d3d3d3;
+	--font-family: 'Montserrat', sans-serif;
+	--font-size: 16px;
+	--line-height: 1.5;
+}
+
+/* Reset de estilos */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Estilos generales */
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	background-color: var(--secondary-color);
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Estilos del header */
+header {
+	background-color: var(--primary-color);
+	padding: 1rem 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.logo {
+	color: var(--secondary-color);
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav li {
+	margin-left: 1.5rem;
+}
+
+nav a {
+	color: var(--secondary-color);
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+button {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 1.5rem;
+}
+
+/* Estilos del hero section */
+.hero {
+	background-image: url('hero.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 30rem;
+	display: flex;
+	align-items: center;
+	color: var(--secondary-color);
+	text-shadow: 0 0 1rem var(--primary-color);
+}
+
+.hero h1 {
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+}
+
+.hero p {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	max-width: 30rem;
+}
+
+.hero a {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 0.25rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Estilos del features section */
+.features {
+	background-color: var(--secondary-color);
+	padding: 4rem 0;
+}
+
+.features h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 2rem;
+}
+
+.grid div {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	padding: 2rem;
+	border-radius: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.grid div i {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.grid div h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.grid div p {
+	font-size: 1rem;
+}
