@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+  
+header, nav, footer {
+    padding: 15px;
+}  
+ 
+ 
+header div h1{
+    color:#04488d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: initial;
+    background-color: #023260;
+    -webkit-text-stroke: 1px chocolate
+}
+
+/*navegador*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color:#04488d;
+    border-width: 20px;
+    border-radius: 20px;
+  
+}
+  
+nav ul li {
+    margin: 0 5px;
+}
+  
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #ec8a13;
+    text-decoration: none;
+}
+
+header {
+    background-color: #023263;
+    color: antiquewhite;
+}
+
+section#noticias {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: lightgray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.box2 {
+    background: rgb(255, 242, 204); 
+    font-size: 20px; 
+    padding: 10px; 
+    border: 1px solid lightgray; 
+    margin: 10px;
+    text-align: center;
+}
+
+.box1 {
+    background: rgb(27, 161, 226); 
+    font-size: 20px; 
+    padding: 10px; 
+    border: 1px solid lightgray; 
+    margin: 10px;
+}
+
+.box {
+    background: ghostwhite; 
+    font-size: 20px; 
+    padding: 10px; 
+    border: 1px solid lightgray; 
+    margin: 10px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+
+.triangle-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.triangle-buttons__triangle {
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+.triangle-buttons__triangle--r {
+    align-items: center;
+    border-color: transparent transparent transparent blue;
+    border-width: 0.5rem 0 0.5rem 0.5rem;
+}
+
+footer div p {
+    text-align:center;
+    color: #333;
+    font-size: 14px;
+    bottom: 0%;
+    margin: 0px;
+  }
