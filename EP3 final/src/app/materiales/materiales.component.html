@@ -1,0 +1,38 @@
+<section id="avisosmateriales">
+
+    <div class="box2">
+        <p> Materiales y Herramientas necesarias </p>
+    </div>
+
+    <div class="container">
+        <div class="col-md-12">    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Asignatura</th>
+                        <th scope="col">Docente</th>
+                        <th scope="col">Proyecto</th>
+                        <th scope="col">Fecha de publicación</th>
+                        <th scope="col">Detalles</th>
+                        <th scope="col">Fecha del proyecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of Materiales">
+                        <td>{{data.estado}}</td>
+                        <td>{{data.asignatura}}</td>
+                        <td>{{data.docente}}</td>
+                        <td>{{data.proyecto}}</td>
+                        <td>{{data.publicacion}}</td>
+                        <td>{{data.detalles}}</td>
+                        <td>{{data.fecha}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>

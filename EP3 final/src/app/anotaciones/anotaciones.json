@@ -1,0 +1,28 @@
+[   
+    {
+        "estado": "Nueva (2)",
+        "profesor": "Simón Astudillo",
+        "asignatura": "Filosofía",
+        "tipo": "Negativa",
+        "fecha": "19/5/23",
+        "detalles": "Alumno habla constantemente, distrae a la clase."        
+    },
+
+    {
+        "estado": "Nueva (1)",
+        "profesor": "Carlos Pérez",
+        "asignatura": "Matemáticas",
+        "tipo": "Negativa",
+        "fecha": "21/3/23",
+        "detalles": "Alumno dice grocerias a su compañero."        
+    },
+
+    {
+        "estado": "-",
+        "profesor": "Guillermo González",
+        "asignatura": "Artes",
+        "tipo": "Positiva",
+        "fecha": "14/3/23",
+        "detalles": "Estudiante comparte sus materiales y ayuda a sus compañeros."  
+    }
+]

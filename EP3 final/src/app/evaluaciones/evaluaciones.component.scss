@@ -1,0 +1,25 @@
+.box1 {
+    background: lightgrey; 
+    font-size: 20px; 
+    padding: 10px; 
+    border: 1px solid lightgray; 
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    background: ghostwhite; 
+    font-size: 20px; 
+    padding: 10px; 
+    border: 1px solid lightgray; 
+    margin: 10px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

@@ -1,0 +1,33 @@
+<section id="evaluacion">
+    <div class="box1">
+        <p> Pruebas, Controles y Evaluaciones </p>
+    </div>
+
+    <div class="container">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Asignatura</th>
+                        <th scope="col">Evaluación</th>
+                        <th scope="col">Temario</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of Evaluaciones">
+                        <td>{{data.estado}}</td>
+                        <td>{{data.asignatura}}</td>
+                        <td>{{data.evaluacion}}</td>
+                        <td>{{data.temario}}</td>
+                        <td>{{data.fecha}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>

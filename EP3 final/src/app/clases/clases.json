@@ -1,0 +1,25 @@
+[   
+    {
+        "estado": "Nueva (2)",
+        "titulo": "Suspensión de clases",
+        "publicacion": "31/3/2023",
+        "detalles": "Estimados alumnos y apoderados, les comunico que se suspenderán las clases el próximo viernes, al ser semana santa. Saludos y feliz semana santa.",
+        "fechas": "7/4/2023"   
+    },
+
+    {
+        "estado": "Nueva (1)",
+        "titulo": "Término anticipado de clases",
+        "publicacion": "31/3/2023",
+        "detalles": "Estimados alumnos y apoderados, les informo que el próximo jueves las clases terminarán a las 13:00, al ser semana santa. Saludos cordiales.",
+        "fechas": "6/4/2023"   
+    },
+
+    {
+        "estado": "-",
+        "titulo": "Término anticipado de clases",
+        "publicacion": "1/3/2023",
+        "detalles": "Estimados alumnos y apoderados, les comunico que el viernes de esta semana las clases terminarán a las 11:00. Saludos.",
+        "fechas": "3/3/2023"   
+    }
+]

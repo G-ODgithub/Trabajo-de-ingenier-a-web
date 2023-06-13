@@ -1,0 +1,30 @@
+<section id="noticias">
+    <div class="box1">
+        <p> Noticias Relevantes </p>
+    </div>
+
+    <div class="container">
+        <div class="col-md-12">        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Asunto</th>
+                        <th scope="col">Detalles</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of Noticias">
+                        <td>{{data.estado}}</td>
+                        <td>{{data.asunto}}</td>
+                        <td>{{data.detalles}}</td>
+                        <td>{{data.fecha}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>
+    
+      </div>
+</section>

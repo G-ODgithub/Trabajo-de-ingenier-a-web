@@ -1,0 +1,37 @@
+[   
+    {
+        "evaluacion": "Prueba 1",
+        "nota": "7.5",
+        "promedio": "8.2",
+        "mejor": "9.5",
+        "peor": "5.0",
+        "fecha": "10/1/2023"   
+    },
+
+    {
+        "evaluacion": "Control 1",
+        "nota": "8.0",
+        "promedio": "8.0",
+        "mejor": "9.9",
+        "peor": "4.0",
+        "fecha": "15/1/2023"   
+    },
+
+    {
+        "evaluacion": "Prueba 2",
+        "nota": "6.5",
+        "promedio": "7.1",
+        "mejor": "8.0",
+        "peor": "4.8",
+        "fecha": "22/1/2023"
+    },
+
+    {
+        "evaluacion": "Control 2",
+        "nota": "9.0",
+        "promedio": "7.5",
+        "mejor": "9.0",
+        "peor": "4.2",
+        "fecha": "29/1/2023"
+    }
+]

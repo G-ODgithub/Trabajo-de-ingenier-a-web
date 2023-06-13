@@ -1,0 +1,21 @@
+[   
+    {
+        "estado": "Nueva (1)",
+        "asignatura": "Física",
+        "docente": "Verónica Díaz",
+        "proyecto": "Proyecto de aerodinámica",
+        "publicacion": "28/3/2023",
+        "detalles": "Queridos alumnos, recuerden que la próxima semana comenzaremos el proyecto de aerodinámica. Lleven palos de maqueta, pegamento, cartón y cualquier otro material que estimen conveniente.",
+        "fecha": "4/4/2023"   
+    },
+
+    {
+        "estado": "-",
+        "asignatura": "Lenguaje",
+        "docente": "Bruno Fuentes",
+        "proyecto": "Lectura en clases",
+        "publicacion": "22/3/2023",
+        "detalles": "Estimados estudiantes, les informo que la próxima semana iniciaremos la lectura del primer libro del plan lector. El libro es 'El Hobbit' por J. R. R. Tolkien, pueden llevar fotocopias o un pdf en su celular si es necesario.",
+        "fecha": "29/3/2023"   
+    }
+]

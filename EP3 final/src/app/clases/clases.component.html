@@ -1,0 +1,32 @@
+<section id="avisosclases">
+    <div class="box2">
+        <p> Avisos sobre las clases </p>
+    </div>
+    
+    <div class="container">
+        <div class="col-md-12">    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Fecha de publicación</th>
+                        <th scope="col">Detalles</th>
+                        <th scope="col">Fecha(s) afectada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of Clases">
+                        <td>{{data.estado}}</td>
+                        <td>{{data.titulo}}</td>
+                        <td>{{data.publicacion}}</td>
+                        <td>{{data.detalles}}</td>
+                        <td>{{data.fechas}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</section>
