@@ -1,0 +1,36 @@
+<section id="notas">
+  
+  <div class="box1">
+    <p> Notas de Física Moderna </p>
+  </div>
+
+  <div class="container">
+    <div class="col-md-12">        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Evaluación</th>
+                    <th scope="col">Nota del Alumno</th>
+                    <th scope="col">Promedio del Curso</th>
+                    <th scope="col">Mejor Nota</th>
+                    <th scope="col">Peor Nota</th>
+                    <th scope="col">Fecha de Evaluación</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of Notas">
+                <td>{{data.evaluacion}}</td>
+                <td>{{data.nota}}</td>
+                <td>{{data.promedio}}</td>
+                <td>{{data.mejor}}</td>
+                <td>{{data.peor}}</td>
+                <td>{{data.fecha}}</td>
+              </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+  </div>
+
+</section>

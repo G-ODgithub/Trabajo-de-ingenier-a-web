@@ -1,0 +1,37 @@
+<body>
+<section id="anotacion">
+    <div class="box1">
+        <p> Anotaciones </p>
+    </div>
+    
+    <div class="container">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Profesor</th>
+                        <th scope="col">Asignatura</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of Anotaciones">
+                        <td>{{data.estado}}</td>
+                        <td>{{data.profesor}}</td>
+                        <td>{{data.asignatura}}</td>
+                        <td>{{data.tipo}}</td>
+                        <td>{{data.fecha}}</td>
+                        <td>{{data.detalles}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
