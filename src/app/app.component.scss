@@ -1,11 +1,16 @@
 .active{
-    color: cadetblue;
+    color: black;
 }
 h1{
     font-family:'Times New Roman', Times, serif;
-    text-align: center; 
+    text-align: left; 
     color: whitesmoke !important;
 }
+
+div.a{
+    text-align: left;
+}
+
 footer div p {
     text-align: center;
     color: #333;
@@ -14,3 +19,81 @@ footer div p {
     bottom: 0%;
     margin: 0px;
   }
+
+.menu{
+    margin-top: 12px;
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 24px;
+}
+
+.menu ul li:hover{
+    color: blue;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 999px){
+    .menu{
+        position: absolute;
+        right: -280px;
+        top: 64px;
+        width: 240px;
+        height: 100%;
+        background: rgb(13, 110, 253);
+    }
+
+    .menu ul li{
+        display: block;
+        text-align: left;
+        margin: 0;
+        padding: 10px 0 10px 26px;
+        border-bottom: 1px;
+    }
+
+    .menu_icon{
+        display: inline-block;
+        position: relative;
+        right: 0;
+        top: 5px;
+    }
+
+    .menu_icon span{
+        width: 32px;
+        height: 3px;
+        margin: 3px;
+        background: black;
+        display: block;
+        transition: 0.2s ease-in-out;
+    }
+
+    .menu_icon span:nth-child(2){
+        width: 4px 0;
+    }
+
+    .menu_icon_Class span:nth-child(2){
+        display: none;
+    }
+
+    .menu_icon_Class span:nth-child(1){
+        transform: rotate(40deg);
+    }
+
+    .menu_icon_Class span:nth-child(3){
+        transform: rotate(-40deg);
+        margin-top: -5px;
+    }
+
+    .menuClass{
+        right: 0;
+        transition: 0.4s ease-in-out;
+    }
+}
