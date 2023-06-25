@@ -1,10 +1,15 @@
-<div class="bg-primary pb-2 pt-2">
-  <h1 class="">Administrador Académico</h1>
-</div>
 <header class="d-flex justify-content-center py-3">
   <!-- Nav tabs -->
-  <nav>
-    <ul class="nav nav-pills">
+  <div class="a">
+    <h1><p>Administrador Académico</p></h1>
+  </div>
+  <div class="menu_icon" [class.menu_icon_Class]="menu_icon_variable" (click)="openMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="menu" [class.menuClass]="menuVariable">
+    <ul>
       <li class="nav-item">
         <a class="nav-link active m" routerLink="/index" routerLinkActive="active">Inicio</a>
       </li>
@@ -14,6 +19,7 @@
       <li class="nav-item">
         <a class="nav-link active" routerLink="/login" routerLinkActive="active">Login</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link active" routerLink="/notas" [hidden]="!messagesService.messages[0]" routerLinkActive="active">Notas</a>
       </li>
@@ -36,7 +42,8 @@
         <a class="nav-link active" routerLink="/evaluaciones" [hidden]="!messagesService.messages[0]"  routerLinkActive="active">Evaluaciones </a>
       </li>
     </ul>
-  </nav>
+  </div>
+
   
   <section>
     <!--Titulos-->
