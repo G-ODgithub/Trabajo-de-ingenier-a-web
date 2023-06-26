@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+
 import { AnotacionesComponent } from './anotaciones/anotaciones.component';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClasesComponent } from './clases/clases.component';
 import { EvaluacionesComponent } from './evaluaciones/evaluaciones.component';
 import { MaterialesComponent } from './materiales/materiales.component';
@@ -94,7 +95,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

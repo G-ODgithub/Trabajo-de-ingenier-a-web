@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { MessagesService } from './messages.service';
+import {ServiceClienteService} from '../services/service-cliente.service'
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,21 @@ import { MessagesService } from './messages.service';
 })
 export class AppComponent {
 
-  constructor(public messagesService: MessagesService){
+  constructor(public messagesService: MessagesService,private servicioCLiente:ServiceClienteService){
 
   }
+  
+  ngOnInit():void{
+    this.getUsuarios()
+  }
+  getUsuarios(){
+    return this.servicioCLiente.Consultar().subscribe(resp=>{
+      console.log(resp)
+    })
+  }
+  
 
-  title = 'ep3';  
+   
   
   menuVariable:boolean = false;
   menu_icon_variable:boolean = false;

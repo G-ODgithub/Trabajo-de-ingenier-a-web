@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-
+import {ServiceClienteService} from '../../services/service-cliente.service'
 @Component({
   selector: 'app-registrarse',
   templateUrl: './registrarse.component.html',
@@ -10,7 +10,7 @@ export class RegistrarseComponent {
 
   siteKey: string;
 
-  constructor(private fb:FormBuilder){
+  constructor(private servicioCLiente:ServiceClienteService,private fb:FormBuilder){
     this.siteKey ='6LecE8gmAAAAAOJaQec1eEcEejSaqOL_4MuXCtkE';
   }
 
@@ -55,4 +55,12 @@ export class RegistrarseComponent {
     this.formUser.reset();
   }
 
+  /* ngOnInit():void{
+    this.servicioCLiente.Consultar().subscribe(datos=>{
+      console.log(datos)
+    })
+  } */
+
 }
+
+
