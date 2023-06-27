@@ -46,6 +46,10 @@
 
                         <span>La contraseña debe contener entre 6 y 16 caracteres</span>
 
+                    </div>
+                    <div class="alert alert-danger mt-2" *ngIf="formUser.errors?.['passwordmatcherror']">
+
+                        <span><p>La contraseña no coincide</p></span>
 
                     </div>
                 </div>
