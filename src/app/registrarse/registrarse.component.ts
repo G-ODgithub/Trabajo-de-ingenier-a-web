@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { ServiceClienteService } from '../../services/service-cliente.service'
+import { matchpassword } from './confirmarcontra.validator';
 @Component({
   selector: 'app-registrarse',
   templateUrl: './registrarse.component.html',
@@ -51,6 +52,9 @@ export class RegistrarseComponent {
     'cpass': ['', [Validators.required, Validators.maxLength(16), Validators.minLength(6)]],
     'captcha': new FormControl('', [Validators.required])
 
+  },
+  {
+    validators:matchpassword
   })
 
   limpiar() {
