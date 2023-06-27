@@ -2,23 +2,27 @@
     <div class="container w-75  ">
         <h2 class="mb-3">Registro</h2>
         <div class="card  " style="background-color:whitesmoke">
-            <form name="validacion" style="background-color:whitesmoke;" id="validacion" [formGroup]="formUser" action="exito.html" class=" mx-5 mb-4 mt-2">
+            <form name="validacion" style="background-color:whitesmoke;" id="validacion" [formGroup]="formUser"
+                action="exito.html" class=" mx-5 mb-4 mt-2">
 
                 <div class="form-group">
                     <label class="form-label form-text" for="nombre">Nombre:</label>
-                    <input class="form-control" formControlName="nombre" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                    <input class="form-control" formControlName="nombre" type="text" id="nombre" name="nombre"
+                        placeholder="Ingrese su nombre">
 
 
                 </div>
 
                 <div class="form-group">
                     <label class="form-label form-text" for="apellidos">Apellidos:</label>
-                    <input class="form-control" formControlName="apellido" type="text" id="apellidos" placeholder="Ingrese sus apellidos" name="apellidos">
+                    <input class="form-control" formControlName="apellido" type="text" id="apellidos"
+                        placeholder="Ingrese sus apellidos" name="apellidos">
                 </div>
 
                 <div class="form-group">
                     <label class="form-label form-text" for="email">Correo electrónico:</label>
-                    <input class="form-control" formControlName="email" type="email" id="correo" placeholder="Ingrese su correo electrónico" name="correo">
+                    <input class="form-control" formControlName="email" type="email" id="correo"
+                        placeholder="Ingrese su correo electrónico" name="correo">
 
                     <div class="alert alert-danger mt-2" [hidden]="email.valid||email.pristine">
 
@@ -29,8 +33,8 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label form-text" for="password">Contraseña:</label>
-                    <input class="form-control" formControlName="pass" placeholder="Ingrese su contraseña" type="password" id="contrasenia"
-                        name="contrasenia">
+                    <input class="form-control" formControlName="pass" placeholder="Ingrese su contraseña"
+                        type="password" id="contrasenia" name="contrasenia">
                     <div class="alert alert-danger mt-2" [hidden]="pass.valid||pass.pristine">
 
                         <span>La contraseña debe contener entre 6 y 16 caracteres</span>
@@ -39,9 +43,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label form-text"  for="confirm_password">Confirmar
+                    <label class="form-label form-text" for="confirm_password">Confirmar
                         contraseña:</label>
-                    <input class="form-control" type="password" placeholder="Reingrese su contraseña" formControlName="cpass" id="confirmar" name="confirmar">
+                    <input class="form-control" type="password" placeholder="Reingrese su contraseña"
+                        formControlName="cpass" id="confirmar" name="confirmar">
                     <div class="alert alert-danger mt-2" [hidden]="cpass.valid||cpass.pristine">
 
                         <span>La contraseña debe contener entre 6 y 16 caracteres</span>
@@ -49,26 +54,29 @@
                     </div>
                     <div class="alert alert-danger mt-2" *ngIf="formUser.errors?.['passwordmatcherror']">
 
-                        <span><p>La contraseña no coincide</p></span>
+                        <span>
+                            <p>La contraseña no coincide</p>
+                        </span>
 
                     </div>
                 </div>
 
                 <div class=" d-flex row justify-content-center mt-4">
-                    <ngx-recaptcha2 #captchaElem    [siteKey]="siteKey" formControlName="captcha">
+                    <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="captcha">
                     </ngx-recaptcha2>
                 </div>
-                
 
-                <button class="btn btn-primary mt-4"  (click)="getDatos();limpiar()" [disabled]="formUser.invalid" type="submit">Registrarse</button>
+
+                <button class="btn btn-primary mt-4" (click)="getDatos();limpiar()" [disabled]="formUser.invalid"
+                    type="submit">Registrarse</button>
             </form>
             <div class="alert alert-danger mt-2 mx-3" [hidden]="formUser.valid||formUser.pristine">
 
                 <span>Todos los campos son obligatorios</span>
 
-<!-- (click)="limpiar()" -->
+                <!-- (click)="limpiar()" -->
             </div>
         </div>
     </div>
-
+</section>
     <!-- {{formUser.get('pass')?.value|json}} -->
