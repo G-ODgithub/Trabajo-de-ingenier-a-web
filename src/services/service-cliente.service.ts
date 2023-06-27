@@ -16,10 +16,12 @@ export class ServiceClienteService {
     return this.servicio.get(`${this.server}`);
   }
 
- /*  CrearUsuario(): Observable<any> {
-    //console.log(JSON.stringify(datos))
-    return this.servicio.post(`${this.server}/registrarse`);
-  } */
+   
+  Registro(usuario:any): Observable<any>{
+    //console.log(JSON.stringify(usuario))
+    let url= `${this.server}/registrarse`
+    return this.servicio.post(url,usuario)
 
+  }
 
 }

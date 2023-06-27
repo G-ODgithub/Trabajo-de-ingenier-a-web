@@ -50,16 +50,19 @@
                     </div>
                 </div>
 
-                <ngx-recaptcha2 #captchaElem    [siteKey]="siteKey" formControlName="captcha">
-                </ngx-recaptcha2>
+                <div class=" d-flex row justify-content-center mt-4">
+                    <ngx-recaptcha2 #captchaElem    [siteKey]="siteKey" formControlName="captcha">
+                    </ngx-recaptcha2>
+                </div>
+                
 
-                <button class="btn btn-primary mt-4" (click)="limpiar()" [disabled]="formUser.invalid" type="submit">Registrarse</button>
+                <button class="btn btn-primary mt-4"  (click)="getDatos();limpiar()" [disabled]="formUser.invalid" type="submit">Registrarse</button>
             </form>
             <div class="alert alert-danger mt-2 mx-3" [hidden]="formUser.valid||formUser.pristine">
 
                 <span>Todos los campos son obligatorios</span>
 
-
+<!-- (click)="limpiar()" -->
             </div>
         </div>
     </div>

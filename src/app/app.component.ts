@@ -13,9 +13,9 @@ export class AppComponent {
 
   }
   
-  ngOnInit():void{
+  /* ngOnInit():void{
     this.getUsuarios()
-  }
+  } */
   getUsuarios(){
     return this.servicioCLiente.Consultar().subscribe(resp=>{
       console.log(resp)
