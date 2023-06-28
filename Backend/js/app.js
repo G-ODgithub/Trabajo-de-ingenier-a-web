@@ -6,7 +6,7 @@ const app = express();
 //cors
 const cors = require('cors');
 const bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+const jsonParser = bodyParser.json();
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -17,6 +17,7 @@ app.listen(3000, () => {
     console.log(`Conectando al servidor http://localhost: ${3000}`);
 });
 app.use(cors());
+app.use(bodyParser.json());
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -31,7 +32,7 @@ connection.connect(function (err) {
     }
     console.log('Conexión establecida ' + connection.threadId);
 });
-app.post("", jsonParser, (req, res) => {
+app.post("/admin", jsonParser, (req, res) => {
     let nombres = req.body.nombres;
     let apellidos = req.body.apellidos;
     let email = req.body.email;
@@ -44,6 +45,28 @@ app.post("", jsonParser, (req, res) => {
             console.error(error);
         }
         res.send('{Usuario ingresado}');
+    });
+});
+app.get('/:email', (req, res) => {
+    let email = req.params.email;
+    connection.query('SELECT id,contraseña FROM usuarios WHERE email = ?', [email], function (error, results, fields) {
+        if (error) {
+            console.error('Error al buscar el registro:', error);
+            res.status(500).json({ error: 'Error al buscar el registro' });
+        }
+        else {
+            if (results.length > 0) {
+                let id = results[0].id;
+                let contraseña = results[0].contraseña;
+                res.json({
+                    id: id,
+                    contraseña: contraseña
+                });
+            }
+            else {
+                res.status(404).json({ mensaje: 'No se encontró ningún registro con el email proporcionado' });
+            }
+        }
     });
 });
 app.post("/registrarse", jsonParser, (req, res) => {
@@ -61,60 +84,57 @@ app.post("/registrarse", jsonParser, (req, res) => {
         res.json('Usuario ingresado');
     });
 });
-app.get("", (req, res) => {
+app.get("/admin/usuarios", jsonParser, (req, res) => {
     connection.query("select * from usuarios", function (error, results, fields) {
         res.send(results);
     });
 });
-/* app.put('/products/:id', (req, res) => {
-
-  const newdata = req.body
-  const idbuscado = parseInt(req.params.id)
-
-  const pfind = products.find(function (producto) {
-    if (producto.id == idbuscado) {
-      return producto
-    }
-  })
-
-
-  if (!pfind) return res.status(404).json({
-    message: "product not found"
-  })
-
-  const newProducts = products.map(function (e) {
-
-    if (e.id == idbuscado) {
-      return { ...e, ...newdata }
-
-    } else {
-      //console.log('mismo elemento')
-      return e
-    }
-  })
-  products = newProducts
-  res.send('actualizando products')
-})
-
-app.delete('/products/:id', (req, res) => {
-  const idbuscado = parseInt(req.params.id)
-
-  const pfind = products.find(function (producto) {
-    if (producto.id == idbuscado) {
-      return producto
-    }
-  })
-
-
-  if (!pfind) return res.status(404).json({
-    message: "product not found"
-  })
-
-  const newProducts = products.filter(function (e) {
-    return e.id !== idbuscado
-    console.log(newProducts)
-  })
-
-  products = newProducts
-  res.send('eliminado')
-}) */ 
+app.get("/admin/:id", jsonParser, (req, res) => {
+    connection.query("SELECT * FROM usuarios WHERE id = ?", [req.params.id], function (error, results, fields) {
+        if (error) {
+            console.error('Este usuario no existe');
+            res.send(error);
+        }
+        res.json(results);
+    });
+});
+app.put('/admin/:id/:campo', jsonParser, (req, res) => {
+    let campoActualizar = req.params.campo; // Nombre del campo que se va a actualizar
+    let nuevoValor = req.body.valor;
+    let id = req.params.id;
+    connection.query("SELECT * FROM usuarios WHERE id = ?", [id], function (error, results, fields) {
+        if (error) {
+            console.error('Este usuario no existe');
+            res.send(error);
+        }
+        connection.query(`UPDATE usuarios SET ${campoActualizar} = ? WHERE id = ?`, [nuevoValor, id], function (error, results, fields) {
+            if (error) {
+                console.error('Error al actualizar el campo:', error);
+                res.status(500).json({ error: 'Error al actualizar el campo' });
+            }
+            else {
+                console.log('Campo actualizado correctamente');
+                res.json({ mensaje: 'Campo actualizado correctamente' });
+            }
+        });
+    });
+});
+app.delete('/admin/:id', jsonParser, (req, res) => {
+    const id = req.params.id;
+    connection.query("SELECT * FROM usuarios WHERE id = ?", [id], function (error, results, fields) {
+        if (error) {
+            console.error('Este usuario no existe');
+            res.status(404).send(error);
+        }
+        connection.query('DELETE FROM usuarios WHERE id = ?', [id], function (error, results, fields) {
+            if (error) {
+                console.error('Error al eliminar usuairo:', error);
+                res.status(500).json({ error: 'Error al eliminar usuario' });
+            }
+            else {
+                console.log('Usuario eliminado correctamente');
+                res.json({ mensaje: 'Usuario eliminado correctamente' });
+            }
+        });
+    });
+});

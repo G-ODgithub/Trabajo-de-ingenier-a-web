@@ -12,10 +12,13 @@ export class ServiceClienteService {
   constructor(private servicio: HttpClient) {
   }
 
-  Consultar(): Observable<any> {
-    return this.servicio.get(`${this.server}`);
+  consultarId(id:any): Observable<any> {
+    return this.servicio.get(`${this.server}/admin/${id}`);
   }
-
+  consultarEmailId(email:any): Observable<any> {
+    console.log(`${this.server}/${email}`)
+    return this.servicio.get(`${this.server}/${email}`);
+  }
    
   Registro(usuario:any): Observable<any>{
     //console.log(JSON.stringify(usuario))
@@ -23,5 +26,7 @@ export class ServiceClienteService {
     return this.servicio.post(url,usuario)
 
   }
+
+
 
 }

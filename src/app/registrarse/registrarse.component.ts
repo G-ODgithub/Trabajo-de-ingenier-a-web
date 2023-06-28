@@ -15,20 +15,7 @@ export class RegistrarseComponent {
     this.siteKey = '6LecE8gmAAAAAOJaQec1eEcEejSaqOL_4MuXCtkE';
   }
 
-  /*   get email(){
-      return this.formUser.get('email') as FormControl;
-    }
-    get nombre(){
-      return this.formUser.get('nombre') as FormControl;
-    }
   
-    formUser = new FormGroup({
-      'nombre': new FormControl('',Validators.required),
-      'apellido':new FormControl('',Validators.required),
-      'email': new FormControl('',[Validators.required,Validators.email]),
-      'contra' : new FormControl('',[Validators.required])
-    }); */
-
 
 
   get email() {
