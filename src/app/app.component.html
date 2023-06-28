@@ -14,10 +14,10 @@
         <a class="nav-link active m" routerLink="/index" routerLinkActive="active">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" routerLink="/registrarse" routerLinkActive="active">Registrarse</a>
+        <a class="nav-link active" routerLink="/registrarse" [hidden]="messagesService.messages[0]" routerLinkActive="active">Registrarse</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" routerLink="/login" routerLinkActive="active">Login</a>
+        <a class="nav-link active" routerLink="/login" [hidden]="messagesService.messages[0]" routerLinkActive="active">Login</a>
       </li>
 
       <li class="nav-item">
@@ -41,6 +41,9 @@
       <li class="nav-item">
         <a class="nav-link active" routerLink="/evaluaciones" [hidden]="!messagesService.messages[0]"  routerLinkActive="active">Evaluaciones </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#" onclick="window.location.reload()" [hidden]="!messagesService.messages[0]"  >Salir </a>
+      </li>
     </ul>
   </div>
 
@@ -60,13 +63,13 @@
       <p>Derechos reservados &copy; 2023 Administrador Académico</p>
   </div>
 </footer> -->
-<footer class="footer" style=" position: relative; bottom: 0; align-items: center; width: 100%;">
+<footer class="footer" style=" position: relative; align-items: center; width: 100%;">
   <div class="footer-content">
     <div class="footer-logo">
       <img src="https://cdn-icons-png.flaticon.com/512/11247/11247453.png" alt="Logo" class="logo">
     </div>
     <div class="footer-text">
-      <p>Derechos reservados &copy; 2023 Administrador Académico | <a href="">Practicas de privacidad</a> | <a href="enlace2.html">Trabaja con nosotros</a> </p>
+      <p><a href="">Sugerencias y reclamos</a> | Derechos reservados &copy; 2023 Administrador Académico | <a href="">Políticas de privacidad</a> | <a href="">Trabaja con nosotros</a> </p>
     </div>
   </div>
 </footer>
